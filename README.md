@@ -1,3 +1,16 @@
+# Custom flight controller firmware and flight controller params 
+Download the latest releases and flash these files onto the flight controller
+
+To enable DDS bridge, remember to add these commands to MAVLINK Console:
+```
+echo DEVICE=eth0 > /fs/microsd/net.cfg
+echo BOOTPROTO=fallback >> /fs/microsd/net.cfg
+echo IPADDR=10.41.10.2 >> /fs/microsd/net.cfg
+echo NETMASK=255.255.255.0 >>/fs/microsd/net.cfg
+echo ROUTER=10.41.10.254 >>/fs/microsd/net.cfg
+echo DNS=10.41.10.254 >>/fs/microsd/net.cfg
+```
+
 # PX4 Drone Autopilot
 
 [![Releases](https://img.shields.io/github/release/PX4/PX4-Autopilot.svg)](https://github.com/PX4/PX4-Autopilot/releases) [![DOI](https://zenodo.org/badge/22634/PX4/PX4-Autopilot.svg)](https://zenodo.org/badge/latestdoi/22634/PX4/PX4-Autopilot)
