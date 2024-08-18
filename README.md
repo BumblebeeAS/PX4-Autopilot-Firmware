@@ -1,4 +1,4 @@
-# Custom flight controller firmware and flight controller params 
+# Custom flight controller firmware and flight controller params
 Download the latest releases and flash these files onto the flight controller
 
 To enable DDS bridge, remember to add these commands to MAVLINK Console:
@@ -10,6 +10,27 @@ echo NETMASK=255.255.255.0 >>/fs/microsd/net.cfg
 echo ROUTER=10.41.10.254 >>/fs/microsd/net.cfg
 echo DNS=10.41.10.254 >>/fs/microsd/net.cfg
 ```
+# Simulation
+To run default simulation:
+```
+make px4_sitl gz_x500
+```
+
+To run drone with bottom facing camera and ArUco Tag:
+```
+make px4_sitl gz_x500_mono_cam_down
+
+```
+
+To see camera topic in gz sim:
+```
+ros2 run ros_gz_bridge parameter_bridge /camera@sensor_msgs/msg/Image@gz.msgs.Image
+```
+
+# Known issues
+Sorry im not good enough, I will work harder
+
+* Starting baylands world screws up the sim. The sim does not auto load when running other commands. To run the sim again, need to run ```gz sim``` manually but the world would still be in baylands
 
 # PX4 Drone Autopilot
 
