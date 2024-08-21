@@ -240,7 +240,8 @@
     </spherical_coordinates>
 
     <include>
-      <uri>model://arucotag</uri>
+      <!-- <uri>model://arucotag</uri> -->
+      <uri>model://arucotag_v3</uri>
     </include>
   </world>
 </sdf>
