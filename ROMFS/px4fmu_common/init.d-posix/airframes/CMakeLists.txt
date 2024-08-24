@@ -37,4 +37,6 @@ px4_add_romfs_files(
 	4010_gz_x500_mono_cam
 	4011_gz_x500_mono_cam_down
 
+	5000_gz_jellyfish2_v1
+
 )
