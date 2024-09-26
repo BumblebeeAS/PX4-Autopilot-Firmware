@@ -243,5 +243,11 @@
       <!-- <uri>model://arucotag</uri> -->
       <uri>model://arucotag_v3</uri>
     </include>
+    <include>
+          <uri>model://robonation_R</uri>
+    </include>
+    <include>
+         <uri>model://robonation_N</uri>
+    </include>
   </world>
 </sdf>
