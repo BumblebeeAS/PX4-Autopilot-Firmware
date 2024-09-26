@@ -42,10 +42,11 @@ gz sdf -p urdf/jellyfish2_v1.urdf > ../jellyfish2_v1/model.sdf
 make px4_sitl gz_jellyfish2_v1
 ```
 
-3. To see camera topic in gz sim:
+3. To see camera image topic and camera info in gz sim:
 
 ```
 ros2 run ros_gz_bridge parameter_bridge /camera@sensor_msgs/msg/Image@gz.msgs.Image
+ros2 run ros_gz_bridge parameter_bridge /camera_info@sensor_msgs/msg/CameraInfo@gz.msgs.CameraInfo
 ```
 
 ## Known issues
