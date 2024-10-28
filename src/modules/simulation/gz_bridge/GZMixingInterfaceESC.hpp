@@ -34,7 +34,7 @@
 #pragma once
 
 #include <lib/mixer_module/mixer_module.hpp>
-
+#include <gz/msgs.hh>
 #include <gz/transport.hh>
 
 #include <uORB/PublicationMulti.hpp>
