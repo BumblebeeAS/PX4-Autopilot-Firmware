@@ -36,10 +36,12 @@ find_package(gz-transport
 	#REQUIRED COMPONENTS core
 	NAMES
 		#ignition-transport11 # IGN (Fortress and earlier) no longer supported
-		gz-transport12
+		gz-transport13
 	#QUIET
 )
-
+if(NOT gz-transport_FOUND)
+	find_package(gz-transport NAMES gz-transport12)
+endif()
 if(gz-transport_FOUND)
 
 	add_compile_options(-frtti -fexceptions)
